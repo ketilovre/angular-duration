@@ -1,0 +1,5 @@
+language: node_js
+node_js:
+  - "0.11"
+before_install: npm install -g grunt-cli bower codeclimate-test-reporter && bower install
+after_script: export CODECLIMATE_REPO_TOKEN=9eb5c0357292ce8a6449f48242b85df4226d8e5f135ac1a71eb1f6180fc7459d && codeclimate < coverage/PhantomJS\ 1.9.7\ \(Linux\)/lcov.info

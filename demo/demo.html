@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html data-ng-app="Demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JSON Duration Demo</title>
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="../src/angular-duration.js"></script>
+    <script type="text/javascript" src="demo.js"></script>
+</head>
+<body data-ng-controller="DemoCtrl">
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://github.com/ketilovre/angular-duration">Angular-Duration</a>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <datepicker data-ng-model="time" class="well well-sm"></datepicker>
+
+        <span data-duration="duration"></span>
+
+    </div>
+</div>
+
+</body>
+</html>
