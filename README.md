@@ -1,4 +1,4 @@
-angular-json-print
+angular-duration
 ==================
 
 Angular directive to turn arbitrary amounts of milliseconds into human-readable durations.
