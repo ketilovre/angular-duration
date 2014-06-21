@@ -14,7 +14,7 @@ angular.module('angularDuration', [])
             secondsInAnHour: 3600,
 
             inSeconds: function(time) {
-                return Math.round(time / 1000);
+                return Math.floor(time / 1000);
             },
 
             pluralize: function(unit, amount) {
@@ -75,8 +75,10 @@ angular.module('angularDuration', [])
                     return Time.withHours(duration);
                 } else if (duration.minutes) {
                     return Time.withMinutes(duration);
-                } else {
+                } else if (duration.seconds) {
                     return "Less than a minute";
+                } else {
+                    return "Less than a second";
                 }
             },
 
@@ -131,7 +133,7 @@ angular.module('angularDuration', [])
             restrict: 'AEC',
             link: function(scope, element, attrs) {
                 scope.$watch(attrs.duration, function(value) {
-                    if (value && value > 0) {
+                    if (typeof value === "number") {
                         element.html(TimeParser.durationString(value));
                     }
                 });

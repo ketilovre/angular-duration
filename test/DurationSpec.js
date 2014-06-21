@@ -16,6 +16,10 @@ describe("Duration", function() {
 
         describe('Duration strings', function() {
 
+            it('should return "Less than a second" for durations under 1000 milliseconds', function() {
+                expect(Time.durationString(999)).toEqual("Less than a second");
+            });
+
             it('should return "Less than a minute" for durations under 60 seconds', function() {
                 expect(Time.durationString(59000)).toEqual("Less than a minute");
             });
