@@ -3,6 +3,9 @@ angular-duration
 
 Angular directive to turn arbitrary amounts of milliseconds into human-readable durations.
 
+[![Build Status](https://travis-ci.org/ketilovre/angular-duration.svg?branch=master)](https://travis-ci.org/ketilovre/angular-duration)
+[![Code Climate](https://codeclimate.com/github/ketilovre/angular-duration.png)](https://codeclimate.com/github/ketilovre/angular-duration)
+
 ##Usage
 
 1. Install via Bower.
