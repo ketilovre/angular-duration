@@ -1,73 +1,25 @@
 angular-json-print
 ==================
 
-Angular directive to pretty-print and syntax-highlight JSON.
-
-[![Build Status](https://travis-ci.org/ketilovre/angular-json-print.svg?branch=master)](https://travis-ci.org/ketilovre/angular-json-print)
-[![Code Climate](https://codeclimate.com/github/ketilovre/angular-json-print.png)](https://codeclimate.com/github/ketilovre/angular-json-print)
+Angular directive to turn arbitrary amounts of milliseconds into human-readable durations.
 
 ##Usage
 
-1. Include 'json-print' as a dependency for your app.
+1. Install via Bower.
 
-  `angular.module('myApp', ['json-print'])`
+  `bower install angular-duration --save`
 
-2. Add the directive `json-print` to an element, along with the data source
-  ```html
-    <pre json-print="{Obj|String}" json-indent="[Int]"></pre>
+2. Include 'angularDuration' as a dependency for your app.
+
+  ```javascript
+    angular.module('myApp', ['angularDuration'])
   ```
-  *Note*: The use of an element like `<pre>` is required to preserve indentation and line breaks, but has no effect on highlighting.
+
+3. Add the directive `duration` to an element, along with the data source
+  ```html
+    <span duration="{Int}"></span>
+  ```
 
 #####Arguments
 
-- `json-print` - Accepts either a regular JavaScript object, or a string of JSON.
-- `json-indent` - *Optional* - Level of indentation, defaults to four spaces.
-
-####Markup
-
-Values, properties, braces and brackets are wrapped in `<span>`s with the following classes:
-
-- Properties
-
-  ```html
-    <span class="json-print-prop">"foo"</span>:
-  ```
-- Strings. Any HTML-markup is escaped and displayed as text.
-
-  ```html
-    <span class="json-print-string">"String with <p>HTML</p>"</span>
-  ```
-- Numbers. Additional classes for zero, and positive and negative numbers.
-  
-  ```html
-      <span class="json-print-number json-print-zero">0</span>
-      <span class="json-print-number json-print-plus">1</span>
-      <span class="json-print-number json-print-minus">-1</span>
-  ```
-  
-- Booleans. Additional classes for true/false.
-
-  ```html
-    <span class="json-print-bool json-print-true">true</span>
-    <span class="json-print-bool json-print-false">false</span>
-  ```
-  
-- Null
-
-  ```html
-      <span class="json-print-null">null</span>
-  ```
-  
-- Objects
-
-  ```html
-      <span class="json-print-object">{</span>
-      <span class="json-print-object">}</span>
-  ```
-
-- Arrays
-
-  ```html
-      <span class="json-print-array">[</span>
-      <span class="json-print-array">]</span>
-  ```
+- `duration` - A duration in milliseconds.
