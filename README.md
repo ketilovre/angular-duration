@@ -5,6 +5,7 @@ Angular directive to turn arbitrary amounts of milliseconds into human-readable 
 
 [![Build Status](https://travis-ci.org/ketilovre/angular-duration.svg?branch=master)](https://travis-ci.org/ketilovre/angular-duration)
 [![Code Climate](https://codeclimate.com/github/ketilovre/angular-duration.png)](https://codeclimate.com/github/ketilovre/angular-duration)
+[![Test Coverage](https://codeclimate.com/github/ketilovre/angular-duration/coverage.png)](https://codeclimate.com/github/ketilovre/angular-duration)
 
 ##Usage
 
